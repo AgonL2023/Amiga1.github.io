@@ -120,8 +120,8 @@
 
 
 
-/*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Titan+One&display=swap");
+
+
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -243,11 +243,6 @@
     --small-font-size: .875rem;
   }
 }
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 html {
   scroll-behavior: smooth;
@@ -309,80 +304,7 @@ img {
 
 
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400..900&display=swap');
-*{
-  font-family: "Big Shoulders Text", sans-serif;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  scroll-padding-top: 2rem;
-  text-decoration: none;
-  list-style: none;
-}
-/* Some variables */
-:root {
-  --main-color: #0eb892;
-  --text-color: #000;
-  --bg-color: #fff;
-  --container-color: #1e1e2a;
-}
-body{
-  color: var(--text-color);
-  background: var(--bg-color);
-}
-img{
-  width: 100%;
-}
-section{
-  padding: 4rem 0 2rem;
-}
-.containerr{
-  max-width: 1070;
-  margin: auto;
-  width: 100%;
-}
-header{
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 100;
-}
-header.shadow {
-  background: #f2f0f1;
-  box-shadow: 0 1px 4px hsl(0, 4%, 15%, 0.1);
-  transition: 0.5s ease;
-}
-.nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 25px 0;
-}
-#menu-icon{
-  font-size: 28px;
-  cursor: pointer;
-  color: var(--main-color);
-  display: none;
-}
-.logo{
-  font-size: 1.5rem;
-  color: var(--main-color);
-  text-transform: uppercase;
-  font-weight: 700;
-}
-.navbar{
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}
-.nav-link{
-  font-size: 1.025rem;
-  color: var(--main-color);
-  font-weight: 700;
-}
+
 @media (max-width: 550px){
   #menu-icon{
     display: initial;
@@ -412,11 +334,87 @@ header.shadow {
   }
   
 }
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Text:wght@400..900&display=swap');
+*{
+  font-family: "Big Shoulders Text", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2rem;
+  text-decoration: none;
+  list-style: none;
+}
+/* Some variables */
+:root {
+  --main-color: #0eb892;
+  --text-color: #000;
+  --bg-color: #fff;
+  --container-color: #1e1e2a;
+}
+body{
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+section{
+  padding: 4rem 0 2rem;
+}
+.container{
+  
+  margin: auto;
+  width: 100%;
+}
+header{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+header.shadow{
+  background: #f2f0f1;
+  box-shadow: 0 1px 4px hsl(0, 4%, 15%, 0.1);
+  transition: 0.5s ease;
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 0;
+  margin-left: 10px;
+}
+#menu-icon{
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--main-color);
+  display: none;
+}
+.logo{
+  font-size: 1.5rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
+.nav-link{
+  font-size: 1.025rem;
+  color: var(--main-color);
+  font-weight: 700;
+}
 #cart-icon{
   position: relative;
   font-size: 1.8rem;
   color: var(--main-color);
   cursor: pointer;
+  margin-right: 30px;
 }
 #cart-icon[data-quantity="0"]::after{
   content: "";
@@ -436,4 +434,32 @@ header.shadow {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 550px){
+  #menu-icon{
+    display: initial;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background: #f2f0f1;
+    row-gap: 0.5rem;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 20px 20px rgb(15 54 55 / 20%);
+    clip-path: circle(0% at 0% 0%);
+    transition: 0.6s;
+  }
+  .nav-link{
+    display: block;
+    padding: 15px;
+  }
+  .navbar.open-menu{
+    clip-path: circle(144% at 0% 0%);
+  }
+  
 }
